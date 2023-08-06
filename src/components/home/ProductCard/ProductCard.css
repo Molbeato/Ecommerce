@@ -1,0 +1,36 @@
+.product-cart {
+    border: thin solid #dcd9d9;
+    border-radius: 1rem;
+}
+
+.product-cart__container-img{
+    position: relative;
+    height: 20rem;
+}
+
+.product-cart__img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 20rem;
+    object-fit: contain;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in;
+}
+
+.product-cart__container-img--hidden{
+    opacity: 0;
+}
+
+.product-cart__container-img--visible{
+    opacity: 1;
+}
+
+.product-cart__container-img:hover img.product-cart__container-img--hidden{
+    opacity: 1;
+}
+
+.product-cart__container-img:hover img.product-cart__container-img--visible{
+    opacity: 0;
+}

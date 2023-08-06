@@ -1,0 +1,38 @@
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white
+};
+
+.header__nav__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    font-size: 300px;
+
+    list-style: none;
+}
+
+.header__nav__link{
+    color: inherit;
+}
+
+.header__nav__link--active{
+    color: orange;
+}
+
+.header__nav__btn{
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+}
