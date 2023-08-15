@@ -4,12 +4,26 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Creato-Bold';
+  src: local('CreatoDisplay'), url('./assets/fonts/CreatoDisplay-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Creato';
+  src: local('CreatoDisplay'), url('./assets/fonts/CreatoDisplay-Light.otf') format('truetype');
+}
+
 html {
     font-size: 62.5%;
+    font-family: Oswald;
 }
 
 body {
   margin: 0;
   padding: 0;
+  
   font-size: 1.6rem;
+  background-color: rgb(210, 208, 224);
+  font-family: 'Creato';
 }

@@ -40,16 +40,11 @@ const CartProduct = ({ cartProduct }) => {
             />
         </div>
 
+
         <div className='cart-product__detail'>
             <header className='cart-product__header'>
                 <h4 className='cart-product__title'>{cartProduct.product.title}</h4>
-                    <button
-                        className='cart-product__btn'
-                        onClick={handleDelete}
-                        disabled={deleteMutation.isLoading}
-                    >
-                        <i className='bx bx-trash'></i>
-                    </button>
+                   
             </header>
         
         
@@ -58,7 +53,16 @@ const CartProduct = ({ cartProduct }) => {
                 <button onClick={decrease} className='cart-product__btn'>-</button>
                 <span>{quantity}</span>
                 <button onClick={increment} className='cart-product__btn'>+</button>
+                 <button
+                    className='cart-product__trash'
+                    onClick={handleDelete}
+                    disabled={deleteMutation.isLoading}
+                    >
+                        <i className='bx bx-trash'></i>
+                    </button>
+                
             </div>
+            
 
             {initialQuantity != quantity && (
                 <button onClick={handleUpdate} disabled={isLoading}>
@@ -71,6 +75,7 @@ const CartProduct = ({ cartProduct }) => {
             <h5>Total:</h5>
             <p><em>$ {initialQuantity * price}</em></p>
         </div>
+        <hr />
         </div>
     </article>
   )

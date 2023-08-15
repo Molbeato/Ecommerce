@@ -1,0 +1,19 @@
+.user-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 300px;
+
+    margin-top: 50px;
+
+    color: rgb(107, 107, 180);
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0  ;
+}

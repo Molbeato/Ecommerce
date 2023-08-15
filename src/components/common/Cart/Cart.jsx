@@ -26,9 +26,9 @@ const Cart = ({ isVisible }) => {
       if (isLogged) createPurchaseMutation.mutate();
     }
 
-  if (isLoading) return <p>Loading cart...</p>
+  if (isLoading) return 
 
-  if (isError) return <p>{error.message ?? "could not load cart"}</p>
+  if (isError) return 
 
   return (
     <div className={toggleCart}>
@@ -53,7 +53,7 @@ const Cart = ({ isVisible }) => {
                       <em>$ {total.toFixed(2)}</em>
                     </p>
 
-                    <button onClick={handleCheckOut} disabled={createPurchaseMutation.isLoading || isLoading}>Checkout </button>
+                    <button className='checkout' onClick={handleCheckOut} disabled={createPurchaseMutation.isLoading || isLoading}>Checkout </button>
                   </div>
                 </div>
               </div>

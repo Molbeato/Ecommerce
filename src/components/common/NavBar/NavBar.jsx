@@ -3,6 +3,8 @@ import "./NavBar.css"
 import { Link, NavLink, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { reset } from "../../../store/slices/authSlices";
+import Logo from '../../../assets/Images/Logo.png'
+
 
 const NavBar = ({ updateCartVisible }) => {
   const dispatch = useDispatch();
@@ -29,9 +31,10 @@ const NavBar = ({ updateCartVisible }) => {
   return (
     <header className="header">
       <Link to="/">
-        <h1>Ecommerce</h1>
+        <img className="logo" src={Logo} alt='logo' />
       </Link>
 
+   
       <nav>
         <ul className="header__nav__list">
           <li>
@@ -39,13 +42,9 @@ const NavBar = ({ updateCartVisible }) => {
               <i className='bx bx-user'></i>
             </NavLink>
           </li>
+         
           <li>
-            <NavLink to="/purchases" className={getClass}>
-              <i className='bx bx-receipt' ></i>
-            </NavLink>
-          </li>
-          <li>
-              <button onClick={handleCartClick} className="header__nav-btn">
+              <button onClick={handleCartClick} className="header__nav__btn">
                 <i className='bx bx-cart-download' ></i>
               </button>
           </li>

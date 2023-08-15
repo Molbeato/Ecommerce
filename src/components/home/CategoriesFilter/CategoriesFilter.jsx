@@ -42,7 +42,7 @@ const CategoriesFilter = ({ formId, onChangeCategories, initialCategory= [] }) =
     if (isError) return <p>{error.message ?? "Something went wrong!"}</p>
 
   return (
-    <fieldset form={formId}>
+    <fieldset form={formId} className='categories-filter_container'>
         <legend>Categories</legend>
         <div>
             <input

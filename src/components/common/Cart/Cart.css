@@ -7,10 +7,11 @@
     display: flex;
     justify-content: end;
 
-    background-color: rgba(0, 0, 0, 0.292);
+    background-color: rgba(0, 0, 0, 0.139);
     opacity: 1;
     visibility: visible;
     transition: transform 0.3s ease-in;
+    z-index: 2;
 }
 
 .wrapper-cart--hidden {
@@ -51,4 +52,16 @@
     padding: 0;
     margin: 0;
     margin-top: 2rem;
+}
+
+.checkout{
+    display: flex;
+    color: #9d63af;
+    background-color: transparent;
+    margin: 5px;
+    position: relative;
+    border: solid 1px;
+    font-size: 20px;
+    left: 60%;
+    cursor: pointer;
 }

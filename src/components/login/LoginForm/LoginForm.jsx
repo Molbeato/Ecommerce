@@ -47,12 +47,12 @@ const LoginForm = ({ onLogin }) => {
       name="password"
       required/>
 
-      <button type="button" onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
+      <button className="eye" type="button" onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
         <i className='bx bx-low-vision'></i>
       </button>
 
       <div>
-        <button type="submit">Login</button>
+        <button className="login_btn" type="submit">Login</button>
       </div>
     </form>
   )

@@ -2,11 +2,12 @@ import { createBrowserRouter } from "react-router-dom";
 import { homeLoader } from "./loaders/homeLoader";
 import App from "../App";
 import Login from "../pages/Login/Login";
-import Purchases from "../pages/Purchases/Purchases";
+
 import ProtectedRoute from "../components/common/ProtectedRoute/ProtectedRoute";
-import Profile from "../pages/Profile/Profile";
+
 import Home from "../pages/Home/Home";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
+import Profile from "../pages/Profiles/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -22,18 +23,10 @@ export const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: "/purchases",
-                element: (
-                <ProtectedRoute>
-                    <Purchases/>
-                </ProtectedRoute>
-                ),
-            },
-            {
                 path: "/profile",
                 element: (
                     <ProtectedRoute>
-                        <Profile/>
+                       <Profile/>
                     </ProtectedRoute>
                     ),
             },

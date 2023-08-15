@@ -16,9 +16,9 @@ const ProductDetail = () => {
     const { data, isLoading, isError, error } = useProductById(productId)
 
     const isProductInCart = 
-        cartQuery.data?.some((cartProduct) => cartProduct.productId === data.id
+        cartQuery.data?.some((cartProduct) => cartProduct.productId === data?.id
       ) ?? false;
-
+   
     const quantityInCart = 
         cartQuery.data?.find((cartProduct) => Number(cartProduct.productId) === Number(productId)
     )?.quantity ?? 1;
@@ -53,12 +53,12 @@ const ProductDetail = () => {
     return (
     <section>
         <section>
-            <div >
+            <div className='image-container'>
                 <img src={data.images[1]?.url} alt={data.tittle} />  
             </div>
 
-            <div>
-                <h3>{data.brand}</h3>
+            <div className='info-container'>
+                <h3 className='product-brand'>{data.brand}</h3>
                 <h2>{data.title}</h2>
 
                 <p>{data.description}</p>
@@ -75,10 +75,10 @@ const ProductDetail = () => {
                     <div>
                         <h3>Quantity</h3>
 
-                        <div>
-                            <button onClick={decrease }>-</button>
+                        <div className='cart-product__controls'>
+                            <button className='cart-product__btn' onClick={decrease }>-</button>
                             <span>{quantity}</span>
-                            <button onClick={increment}>+</button>
+                            <button className='cart-product__btn' onClick={increment}>+</button>
                         </div>
                     </div>
                 </div>

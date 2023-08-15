@@ -33,14 +33,17 @@ const Home = () => {
           />
       </aside>
 
-      <section>
+      <section >
         <Form id={formId} ref={formRef}>
           <input
+          className='search-bar'
           type="search"
           name='title'
           value={titleValue}
+  
           onChange={(e) => setTitleValue(e.target.value)}
-          placeholder='Search'/>
+          placeholder='What are we looking for you today?'/>
+     
         </Form>
         <ProductList categories={categories} title={title}/>
       </section>

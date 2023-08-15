@@ -16,9 +16,10 @@ function App() {
       
       <main>
         <Outlet />
+        <Cart isVisible={isCartVisible}/>
       </main>
 
-      <Cart isVisible={isCartVisible}/>
+      
     </>
   )
 }

@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
   }
   
   return (
-  <Link to={`/product/${product.id}`}>
+  <Link to={`/product/${product.id}`} className='link'>
     <article className='product-cart'>
         <header className='product-cart__header'>
             <div className='product-cart__container-img'>
@@ -39,14 +39,20 @@ const ProductCard = ({ product }) => {
                 className='product-cart__img product-cart__container-img--hidden'
                 />
             </div>
+            <hr />
 
-            <h3 className='product-cart__title'>{product.brand}</h3>
-            <h2 className='product-cart__title'>{product.title}</h2>
         </header>
 
+        <h2 className='product-card__name'>{product.title}</h2>
+        <h3 className='product-card__brand'>{product.brand}</h3>
+            
+
+            
+
+  
         <section className='product-cart__body'>
-            <h3 className='product-cart__title'>Price</h3>
-            <p className='product-cart__paragraph'><em>$ {product.price}</em></p>
+            <h3 className='product-cart__title'>Price:</h3>
+            <p className='product-cart__price'><em>${product.price}</em></p>
         </section>
 
         {isAddVisible && (
@@ -59,7 +65,7 @@ const ProductCard = ({ product }) => {
           </button>
         )}
           
-        {!isAddVisible && <p>You already have this product in your cart</p>}
+        {!isAddVisible && <p className='product-cart-in__btn'>Already in Cart</p>}
 
     </article>
   </Link>

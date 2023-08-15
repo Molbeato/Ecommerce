@@ -17,21 +17,23 @@ const Login = () => {
     };
 
   return (
-    <div>
-        <section>
-            <p>Welcome! Please, enter your email and password to continue</p>
+    <div className="login">
+        <p className="welcome">Welcome! Please, enter your email and password to continue</p>
+        <h3>Login info for preview</h3>
+        <section className="login-info">
+            
             <section>
-                <h3>Test data</h3>
-                <ul>
+                
+                <div className="login-credentials">
                     <li>
                         <em>Email</em>: test123@test.com
                     </li>
                     <li>
                         <em>Password</em>: test123
                     </li>
-                </ul>
+                </div>
             </section>
-            <LoginForm onLogin={handleLogin} />
+            <LoginForm className="login-submit" onLogin={handleLogin} />
         </section>
 
     { isLogged && <Navigate to={from ?? "/"} />}
