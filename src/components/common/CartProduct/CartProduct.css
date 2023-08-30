@@ -1,12 +1,15 @@
-.cart-product__img{
+
+
+.cart__img{
     display: flex;
-    justify-content: center;
-    width: 50%;
+    width: 200px;
+    height: 200px;
     padding: 10px;
     margin: 15px;
 }
 
 .cart-product__controls{
+
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -40,6 +43,7 @@
 
 .cart-product__detail{
     flex-grow: 1;
+    margin: 7px;
 }
 
 .cart-product__header{
