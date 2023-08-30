@@ -33,7 +33,7 @@ const CartProduct = ({ cartProduct }) => {
 
   return (
     <article className='cart-product'>
-        <div className='cart_product_box'>
+        <div className='cart-product__img'>
             <img
             src={cartProduct.product.images[1]?.url}
             alt={cartProduct.product.title}
@@ -65,7 +65,7 @@ const CartProduct = ({ cartProduct }) => {
             
 
             {initialQuantity != quantity && (
-                <button onClick={handleUpdate} disabled={isLoading} className='checkout'>
+                <button onClick={handleUpdate} disabled={isLoading}>
                 Update Cart
                 </button>
             )}

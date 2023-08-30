@@ -1,9 +1,10 @@
 
 
-.cart_product_box{
+.cart-product__img{
     display: flex;
-    width: 200px;
-    height: 200px;
+    justify-content: center;
+
+    width: 50%;
     padding: 10px;
     margin: 15px;
 }
@@ -43,7 +44,6 @@
 
 .cart-product__detail{
     flex-grow: 1;
-    margin: 7px;
 }
 
 .cart-product__header{
