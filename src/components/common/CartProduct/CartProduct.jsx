@@ -33,7 +33,7 @@ const CartProduct = ({ cartProduct }) => {
 
   return (
     <article className='cart-product'>
-        <div className='cart__img'>
+        <div className='cart_product_box'>
             <img
             src={cartProduct.product.images[1]?.url}
             alt={cartProduct.product.title}
