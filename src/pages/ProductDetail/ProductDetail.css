@@ -34,7 +34,8 @@
     display: flex;
     justify-content: center;
     background-color: white;
-    box-shadow: -5px 1px 50px 0px ;
+    margin-bottom: 10px;
+    box-shadow: -5px 1px 50px 0px rgba(0, 0, 0, 0.235);
 }
 
 .image-container img{
@@ -42,11 +43,17 @@
 }
 
 .info-container{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 20px;
 }
 
 .product-brand{
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
+}
+
+.detail-loader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }

@@ -2,12 +2,16 @@ import './ProductList.css'
 import { useProducts } from '../../../hooks/queries/useProducts'
 
 import ProductCard from '../ProductCard/ProductCard'
+import { ColorRing, InfinitySpin } from 'react-loader-spinner';
 
 
 const ProductList = ({ categories, title, excludeIds = [] }) => {
   const {data, isLoading, isError} = useProducts(categories, title);
 
-  if (isLoading) return <p>Loading products...</p>
+  if (isLoading) return <div className='loader'> 
+    <InfinitySpin 
+color="rgb(143, 98, 169)"
+/></div>
 
   if (isError) return <p>Something went wrong!</p>
 
@@ -20,7 +24,7 @@ const ProductList = ({ categories, title, excludeIds = [] }) => {
           <ProductCard product={product}/>
         </li>
       ))}
-    </ul>
+    </ul> 
   )
 }
 

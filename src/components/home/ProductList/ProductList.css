@@ -10,3 +10,10 @@
     width: 100%;
     max-width: 300px;
 }
+
+.loader{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+
+}

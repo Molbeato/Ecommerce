@@ -3,3 +3,9 @@
     margin-left: 2rem;
     
 }
+
+.categories-loader{
+    position: absolute;
+    left: 5%;
+    top: 20%;
+ }

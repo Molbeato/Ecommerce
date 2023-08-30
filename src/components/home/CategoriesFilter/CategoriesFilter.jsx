@@ -1,6 +1,7 @@
 import './CategoriesFilter.css'
 import { useCategories } from '../../../hooks/queries/useCategories'
 import { useEffect, useRef, useState } from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
 
 const CategoriesFilter = ({ formId, onChangeCategories, initialCategory= [] }) => {
     const { data, isLoading, isError, error} = useCategories();
@@ -35,9 +36,13 @@ const CategoriesFilter = ({ formId, onChangeCategories, initialCategory= [] }) =
       if (isFirstRender.current) isFirstRender.current = false;
       else onChangeCategories();
     }, [categoryIdList, onChangeCategories])
-    
 
-    if (isLoading) return <p>Loading categories...</p>
+
+    if (isLoading) return <div className='categories-loader'>
+    <InfinitySpin 
+  width='200'
+  color="rgb(143, 98, 169)"
+/></div>
 
     if (isError) return <p>{error.message ?? "Something went wrong!"}</p>
 

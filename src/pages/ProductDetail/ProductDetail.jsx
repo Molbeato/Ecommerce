@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useAddProductToCart } from '../../hooks/queries/useAddProductToCart';
 import { useSelector } from 'react-redux';
 import { useCart } from '../../hooks/queries/useCart';
+import { InfinitySpin } from 'react-loader-spinner';
 
 const ProductDetail = () => {
     const navigate = useNavigate();
@@ -46,7 +47,10 @@ const ProductDetail = () => {
     }, [quantityInCart])
     
 
-    if (isLoading) return <p>Loading products...</p>
+    if (isLoading) return <div className='detail-loader'> 
+    <InfinitySpin 
+color="rgb(143, 98, 169)"
+/></div>
 
     if (isError) return <p>{error.message ?? 'Something went wrong!'}</p>
 
