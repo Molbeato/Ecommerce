@@ -34,12 +34,13 @@ const CartProduct = ({ cartProduct }) => {
   return (
     <article className='cart-product'>
         <div className='cart-product__img'>
+        <div>
             <img
             src={cartProduct.product.images[1]?.url}
             alt={cartProduct.product.title}
             />
         </div>
-
+        </div>
 
         <div className='cart-product__detail'>
             <header className='cart-product__header'>

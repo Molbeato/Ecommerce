@@ -1,16 +1,13 @@
 
-
 .cart-product__img{
     display: flex;
     justify-content: center;
-
     width: 50%;
     padding: 10px;
     margin: 15px;
 }
 
 .cart-product__controls{
-
     display: flex;
     align-items: center;
     gap: 1rem;
